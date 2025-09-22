@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import os
 
-def load_and_clean_data(filepath="/Users/ob/Projects/teleco/data/WA_Fn-UseC_-Telco-Customer-Churn.csv"):
+def load_and_clean_data(filepath="data/WA_Fn-UseC_-Telco-Customer-Churn.csv"):
     """Load and perform initial cleaning of the dataset"""
     df = pd.read_csv(filepath)
     
@@ -134,7 +134,7 @@ def get_preprocessed_data(filepath=None, scale=True):
     
     # Load and clean data
     if filepath is None:
-        filepath = "/Users/ob/Projects/teleco/data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+        filepath = "data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
     df = load_and_clean_data(filepath)
     
     # Encode categorical features
@@ -156,7 +156,7 @@ def get_preprocessed_data(filepath=None, scale=True):
 def save_processed_data(X_train, X_val, X_test, y_train, y_val, y_test, output_dir=None):
     """Save processed data to files"""
     if output_dir is None:
-        output_dir = "/Users/ob/Projects/teleco/data/processed"
+        output_dir = "data/processed"
     
     os.makedirs(output_dir, exist_ok=True)
     

@@ -268,7 +268,7 @@ class GBMModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
         os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/gbm_feature_importance_comparison.png")
         plt.show()
@@ -310,7 +310,8 @@ class GBMModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/gbm_learning_curves.png")
         plt.show()
     
@@ -332,7 +333,8 @@ class GBMModels:
         plt.legend(loc='lower right')
         plt.grid(True, alpha=0.3)
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/gbm_roc_curves.png")
         plt.show()
     
@@ -374,7 +376,7 @@ class GBMModels:
     def save_models(self, output_dir=None):
         """Save all trained models"""
         if output_dir is None:
-            output_dir = "/Users/ob/Projects/teleco/models"
+            output_dir = "models"
         
         os.makedirs(output_dir, exist_ok=True)
         
@@ -406,7 +408,8 @@ def plot_shap_analysis(model, X_sample, feature_names):
         shap.summary_plot(shap_values, X_sample, feature_names=feature_names, show=False)
         plt.title("SHAP Feature Importance")
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/shap_summary.png", bbox_inches='tight')
         plt.show()
         
@@ -473,7 +476,7 @@ def main():
     print("SAVING RESULTS")
     print("-"*40)
     
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
     results_df.to_csv(f"{output_dir}/gbm_models_results.csv", index=False)
     print(f"Results saved to {output_dir}/gbm_models_results.csv")

@@ -257,7 +257,7 @@ class RegressionModels:
             
             plt.tight_layout()
             
-            output_dir = "/Users/ob/Projects/teleco/data/plots"
+            output_dir = "data/plots"
             os.makedirs(output_dir, exist_ok=True)
             plt.savefig(f"{output_dir}/logistic_coefficients_{model_name}.png")
             plt.show()
@@ -305,7 +305,8 @@ class RegressionModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/calibration_curves.png")
         plt.show()
     
@@ -334,7 +335,8 @@ class RegressionModels:
         plt.legend(loc='lower left')
         plt.grid(True, alpha=0.3)
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/precision_recall_curves_regression.png")
         plt.show()
     
@@ -379,7 +381,8 @@ class RegressionModels:
         plt.title(f'Decision Boundary - {model_name}')
         plt.legend(*scatter.legend_elements(), title="Actual Churn")
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/decision_boundary_{model_name}.png")
         plt.show()
     
@@ -448,7 +451,8 @@ class RegressionModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/learning_curves_regression.png")
         plt.show()
     
@@ -499,7 +503,7 @@ class RegressionModels:
     def save_models(self, output_dir=None):
         """Save all trained models"""
         if output_dir is None:
-            output_dir = "/Users/ob/Projects/teleco/models"
+            output_dir = "models"
         
         os.makedirs(output_dir, exist_ok=True)
         
@@ -585,7 +589,7 @@ def main():
     print("SAVING RESULTS")
     print("-"*40)
     
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
     results_df.to_csv(f"{output_dir}/regression_models_results.csv", index=False)
     print(f"Results saved to {output_dir}/regression_models_results.csv")

@@ -15,6 +15,7 @@ from sklearn.manifold import TSNE
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import cdist
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 # Import preprocessing functions
@@ -94,7 +95,8 @@ class ClusteringModels:
         plt.suptitle('Cluster Evaluation Metrics', fontsize=14)
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/optimal_clusters_analysis.png")
         plt.show()
         
@@ -347,7 +349,8 @@ class ClusteringModels:
         plt.suptitle(f'Cluster Visualizations ({method})', fontsize=14)
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/cluster_visualization_{method.lower()}.png")
         plt.show()
     
@@ -373,7 +376,8 @@ class ClusteringModels:
         plt.xlabel('Sample Index or (Cluster Size)')
         plt.ylabel('Distance')
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/dendrogram.png")
         plt.show()
     
@@ -416,7 +420,8 @@ class ClusteringModels:
         plt.suptitle('Churn Rate Analysis by Cluster', fontsize=14)
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/cluster_churn_analysis.png")
         plt.show()
     
@@ -454,7 +459,8 @@ class ClusteringModels:
         plt.xlabel('Cluster')
         plt.ylabel('Feature')
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/cluster_profiles_{model_name}.png")
         plt.show()
         
@@ -503,7 +509,8 @@ class ClusteringModels:
             plt.suptitle('Clustering Methods Comparison', fontsize=14)
             plt.tight_layout()
             
-            output_dir = "/Users/ob/Projects/teleco/data/plots"
+            output_dir = "data/plots"
+            os.makedirs(output_dir, exist_ok=True)
             plt.savefig(f"{output_dir}/clustering_comparison.png")
             plt.show()
         
@@ -564,7 +571,8 @@ class ClusteringModels:
         print(segments_results.to_string(index=False))
         
         # Save results
-        output_dir = "/Users/ob/Projects/teleco/results"
+        output_dir = "results"
+        os.makedirs(output_dir, exist_ok=True)
         segments_results.to_csv(f"{output_dir}/customer_segments_{model_name}.csv", index=False)
         
         return segments_results
@@ -646,7 +654,8 @@ def main():
     print("SAVING RESULTS")
     print("-"*40)
     
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
+    os.makedirs(output_dir, exist_ok=True)
     comparison_results.to_csv(f"{output_dir}/clustering_comparison.csv", index=False)
     print(f"Comparison results saved to {output_dir}/clustering_comparison.csv")
     

@@ -328,7 +328,7 @@ class SVMModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
         os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/svm_decision_boundaries_2d.png")
         plt.show()
@@ -369,7 +369,8 @@ class SVMModels:
         
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/svm_margin_analysis.png")
         plt.show()
     
@@ -410,7 +411,8 @@ class SVMModels:
         plt.title('SVM Kernel Comparison')
         plt.grid(True, alpha=0.3, axis='y')
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/svm_kernel_comparison.png")
         plt.show()
         
@@ -442,7 +444,8 @@ class SVMModels:
         plt.legend(loc='lower right')
         plt.grid(True, alpha=0.3)
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/svm_roc_curves.png")
         plt.show()
     
@@ -469,7 +472,8 @@ class SVMModels:
             plt.grid(True, alpha=0.3, axis='y')
             plt.tight_layout()
             
-            output_dir = "/Users/ob/Projects/teleco/data/plots"
+            output_dir = "data/plots"
+            os.makedirs(output_dir, exist_ok=True)
             plt.savefig(f"{output_dir}/svm_training_times.png")
             plt.show()
     
@@ -491,7 +495,8 @@ class SVMModels:
         plt.suptitle('Confusion Matrices - SVM Models', fontsize=14)
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/svm_confusion_matrices.png")
         plt.show()
     
@@ -549,7 +554,7 @@ class SVMModels:
     def save_models(self, output_dir=None):
         """Save all trained models"""
         if output_dir is None:
-            output_dir = "/Users/ob/Projects/teleco/models"
+            output_dir = "models"
         
         os.makedirs(output_dir, exist_ok=True)
         
@@ -636,7 +641,7 @@ def main():
     print("SAVING RESULTS")
     print("-"*40)
     
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
     
     # Save main results

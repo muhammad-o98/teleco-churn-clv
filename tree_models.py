@@ -161,7 +161,7 @@ def plot_feature_importance(model, feature_names, model_name="Model", top_n=20):
     plt.xlabel("Feature Importance")
     plt.tight_layout()
     
-    output_dir = "/Users/ob/Projects/teleco/data/plots"
+    output_dir = "data/plots"
     os.makedirs(output_dir, exist_ok=True)
     plt.savefig(f"{output_dir}/feature_importance_{model_name.lower().replace(' ', '_')}.png")
     plt.show()
@@ -190,7 +190,8 @@ def plot_confusion_matrices(models_dict, X_test, y_test):
     
     plt.tight_layout()
     
-    output_dir = "/Users/ob/Projects/teleco/data/plots"
+    output_dir = "data/plots"
+    os.makedirs(output_dir, exist_ok=True)
     plt.savefig(f"{output_dir}/confusion_matrices_trees.png")
     plt.show()
 
@@ -212,7 +213,8 @@ def plot_roc_curves(models_dict, X_test, y_test):
     plt.legend()
     plt.grid(True, alpha=0.3)
     
-    output_dir = "/Users/ob/Projects/teleco/data/plots"
+    output_dir = "data/plots"
+    os.makedirs(output_dir, exist_ok=True)
     plt.savefig(f"{output_dir}/roc_curves_trees.png")
     plt.show()
 
@@ -228,7 +230,8 @@ def visualize_decision_tree(model, feature_names, max_depth=3):
               fontsize=9)
     plt.title("Decision Tree Visualization")
     
-    output_dir = "/Users/ob/Projects/teleco/data/plots"
+    output_dir = "data/plots"
+    os.makedirs(output_dir, exist_ok=True)
     plt.savefig(f"{output_dir}/decision_tree_viz.png", dpi=100, bbox_inches='tight')
     plt.show()
 
@@ -253,7 +256,7 @@ def evaluate_final_model(model, X_test, y_test, model_name="Model"):
 def save_model(model, model_name, output_dir=None):
     """Save trained model"""
     if output_dir is None:
-        output_dir = "/Users/ob/Projects/teleco/models"
+        output_dir = "models"
     
     os.makedirs(output_dir, exist_ok=True)
     filepath = os.path.join(output_dir, f"{model_name}.pkl")
@@ -343,7 +346,7 @@ def main():
     print(results_df.to_string(index=False))
     
     # Save results
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
     results_df.to_csv(f"{output_dir}/tree_models_results.csv", index=False)
     print(f"\nResults saved to {output_dir}/tree_models_results.csv")

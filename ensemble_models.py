@@ -42,7 +42,7 @@ class ModelComparison:
         self.metrics = {}
         self.ensemble_models = {}
         
-    def load_trained_models(self, models_dir="/Users/ob/Projects/teleco/models"):
+    def load_trained_models(self, models_dir="models"):
         """Load pre-trained models from disk"""
         print("Loading pre-trained models...")
         
@@ -389,7 +389,7 @@ class ModelComparison:
         plt.suptitle('Comprehensive Model Comparison', fontsize=16)
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
         os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/comprehensive_model_comparison.png", dpi=100, bbox_inches='tight')
         plt.show()
@@ -426,7 +426,8 @@ class ModelComparison:
         plt.legend(loc='lower right', fontsize=10)
         plt.grid(True, alpha=0.3)
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/roc_curves_all_models.png")
         plt.show()
     
@@ -458,7 +459,8 @@ class ModelComparison:
         plt.title('Model Prediction Agreement Matrix')
         plt.tight_layout()
         
-        output_dir = "/Users/ob/Projects/teleco/data/plots"
+        output_dir = "data/plots"
+        os.makedirs(output_dir, exist_ok=True)
         plt.savefig(f"{output_dir}/prediction_agreement.png")
         plt.show()
         
@@ -560,7 +562,8 @@ class ModelComparison:
         """)
         
         # Save final report
-        output_dir = "/Users/ob/Projects/teleco/results"
+        output_dir = "results"
+        os.makedirs(output_dir, exist_ok=True)
         
         with open(f"{output_dir}/final_report.txt", 'w') as f:
             f.write("TELCO CHURN PREDICTION - FINAL REPORT\n")
@@ -637,7 +640,7 @@ def main():
     print("SAVING RESULTS")
     print("-"*40)
     
-    output_dir = "/Users/ob/Projects/teleco/results"
+    output_dir = "results"
     os.makedirs(output_dir, exist_ok=True)
     
     # Save model comparison
