@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-22T13:33:04.204445",
+  "configuration": {
+    "mode": "full",
+    "parallel": true,
+    "visualize": false,
+    "project_dir": "/Users/ob/Projects/teleco",
+    "verbose": false
+  },
+  "execution_times": {
+    "Data Preprocessing": 0.00951385498046875,
+    "EDA": 1.1874361038208008,
+    "Tree Models": 0.4098820686340332,
+    "GBM Models": 269.2709391117096,
+    "Regression Models": 25.900240182876587,
+    "SVM Models": 3.067784070968628,
+    "Clustering": 22.746981859207153,
+    "Ensemble Models": 12.867956161499023
+  },
+  "stages_completed": [
+    "preprocessing",
+    "eda",
+    "tree_models",
+    "gbm_models",
+    "regression_models",
+    "svm_models",
+    "clustering",
+    "ensemble_models"
+  ],
+  "stages_failed": [],
+  "models_trained": [
+    "DecisionTree",
+    "RandomForest",
+    "GradientBoosting",
+    "XGBoost",
+    "LightGBM",
+    "AdaBoost",
+    "XGBoost_Tuned",
+    "LightGBM_Tuned",
+    "LogisticRegression",
+    "RidgeClassifier",
+    "LogisticRegressionCV",
+    "ElasticNet",
+    "LogisticRegression_Tuned",
+    "LinearSVM",
+    "RBF_SVM",
+    "Polynomial_SVM",
+    "RBF_SVM_Tuned",
+    "VotingEnsemble",
+    "StackingEnsemble"
+  ],
+  "best_model": {
+    "name": "LightGBM_Tuned",
+    "auc": 0.848363429693353,
+    "accuracy": 0.7991483321504613,
+    "f1": 0.5368248772504092
+  },
+  "errors": []
+}

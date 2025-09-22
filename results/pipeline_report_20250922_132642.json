@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-09-22T13:26:42.203890",
+  "configuration": {
+    "mode": "quick",
+    "parallel": false,
+    "visualize": false,
+    "project_dir": "/Users/ob/Projects/teleco",
+    "verbose": false
+  },
+  "execution_times": {
+    "Data Preprocessing": 0.005526065826416016,
+    "EDA": 1.2183029651641846,
+    "Tree Models": 0.23307204246520996,
+    "GBM Models": 1.4383690357208252,
+    "Regression Models": 4.528295040130615,
+    "Ensemble Models": 1.8797268867492676
+  },
+  "stages_completed": [
+    "preprocessing",
+    "eda",
+    "tree_models",
+    "gbm_models",
+    "regression_models",
+    "ensemble_models"
+  ],
+  "stages_failed": [],
+  "models_trained": [
+    "DecisionTree",
+    "RandomForest",
+    "GradientBoosting",
+    "XGBoost",
+    "LightGBM",
+    "LogisticRegression",
+    "RidgeClassifier",
+    "VotingEnsemble"
+  ],
+  "best_model": {
+    "name": "LogisticRegression",
+    "auc": 0.8459350538634427,
+    "accuracy": 0.8048261178140526,
+    "f1": 0.5901639344262295
+  },
+  "errors": []
+}
