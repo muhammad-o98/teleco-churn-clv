@@ -10,7 +10,7 @@ sns.set_theme(style="whitegrid")
 # ===============================
 # 1. Load Data
 # ===============================
-DEFAULT_DATA_PATH = "/Users/ob/Projects/teleco/data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+DEFAULT_DATA_PATH = "data/WA_Fn-UseC_-Telco-Customer-Churn.csv"
 df = pd.read_csv(DEFAULT_DATA_PATH)
 df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
 

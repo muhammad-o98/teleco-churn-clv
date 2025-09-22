@@ -21,7 +21,7 @@ def init_data(target_dir=None):
     # Step 2: If no target_dir provided, use default
     #"~/Projects/teleco/data"
     if target_dir is None:
-        target_dir = os.path.expanduser("~/Projects/teleco/data")
+        target_dir = os.path.expanduser("data")
 
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
@@ -54,7 +54,7 @@ def init_data(target_dir=None):
 
     return target_dir, pd.concat(all_dfs, ignore_index=True) if all_dfs else pd.DataFrame()
 
-#"/Users/ob/Projects/teleco/data/"
+#"Projects/teleco/data/"
 if __name__ == "__main__":
     # Example: use default
     data_path, df = init_data()
