@@ -1,0 +1,15 @@
+# Step 1: Install required libraries
+pip install pandas numpy scikit-learn xgboost lightgbm matplotlib seaborn joblib
+
+# Step 2: Run preprocessing
+python prep.py
+
+# Step 3: Train all model types
+python tree_models.py
+python gbm_models.py
+python regression_models.py
+python svm_models.py
+python clustering_models.py
+
+# Step 4: Compare and create ensembles
+python ensemble_models.py`

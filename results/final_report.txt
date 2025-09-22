@@ -1,0 +1,16 @@
+TELCO CHURN PREDICTION - FINAL REPORT
+============================================================
+
+Best Model: Logistic Regression
+AUC Score: 0.8459
+F1 Score: 0.5902
+
+All Models Performance:
+              Model  Accuracy  Precision   Recall       F1      AUC
+Logistic Regression  0.804826   0.666667 0.529412 0.590164 0.845935
+  Gradient Boosting  0.804116   0.672535 0.510695 0.580547 0.843797
+      Decision Tree  0.797019   0.676000 0.451872 0.541667 0.835049
+           LightGBM  0.784244   0.612903 0.508021 0.555556 0.830176
+      Random Forest  0.788502   0.631944 0.486631 0.549849 0.826238
+            XGBoost  0.787083   0.619355 0.513369 0.561404 0.818444
+                SVM  0.799858   0.676923 0.470588 0.555205 0.799592

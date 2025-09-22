@@ -1,0 +1,55 @@
+
+============================================================
+TELCO CHURN PREDICTION PIPELINE REPORT
+============================================================
+
+Timestamp: 2025-09-22T12:41:42.346017
+Mode: full
+Total Execution Time: 256.01 seconds
+
+STAGES COMPLETED (8):
+preprocessing, eda, tree_models, gbm_models, regression_models, svm_models, clustering, ensemble_models
+
+STAGES FAILED (0):
+None
+
+MODELS TRAINED (19):
+  - DecisionTree
+  - RandomForest
+  - GradientBoosting
+  - XGBoost
+  - LightGBM
+  - AdaBoost
+  - XGBoost_Tuned
+  - LightGBM_Tuned
+  - LogisticRegression
+  - RidgeClassifier
+  - LogisticRegressionCV
+  - ElasticNet
+  - LogisticRegression_Tuned
+  - LinearSVM
+  - RBF_SVM
+  - Polynomial_SVM
+  - RBF_SVM_Tuned
+  - VotingEnsemble
+  - StackingEnsemble
+
+BEST MODEL:
+{
+  "name": "LightGBM_Tuned",
+  "auc": 0.848363429693353,
+  "accuracy": 0.7991483321504613,
+  "f1": 0.5368248772504092
+}
+
+EXECUTION TIMES:
+  Data Preprocessing: 0.13s
+  EDA: 1.11s
+  Tree Models: 0.36s
+  GBM Models: 214.69s
+  Regression Models: 16.53s
+  SVM Models: 2.49s
+  Clustering: 9.21s
+  Ensemble Models: 11.48s
+============================================================
+        
